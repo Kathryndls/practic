@@ -1,0 +1,234 @@
+body {
+	margin: 0;
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+h2 {
+	font-weight: 100;
+}
+
+.container {
+	max-width: 900px;
+	margin: auto;
+	padding: 15px;
+}
+.image {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 200px;
+}
+.image-one {
+	background: url(../img/1.jpg) center no-repeat;
+	background-size: cover;
+}
+.image-one:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4);
+}
+.image-two {
+	background: url(../img/2.jpg) center no-repeat;
+	background-size: cover;
+}
+.image-two:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4);
+}
+.image-three {
+	background: url(../img/3.jpg) center no-repeat;
+	background-size: cover;
+	outline: none;
+}
+.image-three:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4);
+}
+.image-four {
+	background: url(../img/4.jpg) center no-repeat;
+	background-size: cover;
+	justify-content: flex-end;
+}
+.image-four:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4);
+}
+
+.button-one {
+	border: none;
+	font-weight: 700;
+	font-size: 14px;
+ color: white;
+ padding: .8em 1em calc(.8em + 3px);
+ border-radius: 3px;
+ background: rgb(64,199,129);
+ box-shadow: 0 -3px rgb(53,167,110) inset;
+ transition: 0.2s;
+}
+.button-one:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4)
+}
+.button-two {
+	display: inline-block;
+ color: white;
+ padding: .5em 2em;
+ border: none;
+ border-width: 2px 0;
+ border-style: solid none;
+ border-color: #FDBE33 #000 #D77206;
+ border-radius: 6px;
+ background: linear-gradient(#F3AE0F, #E38916) #E38916;
+ transition: 0.2s;
+}
+.button-two:hover {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* me practics 1 {псевдокласы} */
+.box {
+	transition: 0.9s;
+	text-decoration: none;
+}
+.box:hover {
+	background-color: black;
+	text-decoration: underline;
+}
+.box:active {
+	color: green;
+}
+.box:visited {
+	color: blue;
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid green;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0.4);
+}
+
+li:nth-child(2n+1) {
+	background-color: green;
+}
+
+a{
+	display: block;
+	width: 80px;
+	text-align: center;
+	text-decoration: none;
+}
+a::before {
+	content: '  ';
+	display: block;
+	width: 100%;
+	height: 1px;
+	transform-origin: 100%;
+	transform: scaleX(0);
+	background-color: red;
+	transition: all 0.2s;
+}
+a::after {
+	content: '  ';
+	display: block;
+	width: 100%;
+	height: 1px;
+	transform-origin: 0%;
+	transform: scaleX(0);
+	background-color: red;
+	transition: all 0.2s;
+}
+a:hover::before {
+	transform: scaleX(1);
+}
+a:hover::after {
+	transform: scaleX(1);
+}
+.new {
+	border: 3px solid #000;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.lesson {
+	/* margin-left: 50%; */
+	font-size: 15px;
+}
+img {
+	width: 100%;
+}
+/* .tab-pane fade {
+	mb500px
+} */
+
+
+
+
+/* 28 урок анимация  */
+/* 28 урок анимация  */
+/* 28 урок анимация  */
+
+/* Ключевые кадры анимации */
+@keyframes move {
+	/* 1 кадр анимации */
+	from {
+		margin-left: 0;
+	}
+	/* Промежуточные кадры анимации */
+	10% {
+		margin-left: 20px;
+	}
+	/* Конечный кадр анимации  */
+	to {
+		margin-left: 400px;
+	}
+}
+
+.box_28 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	animation-name: move;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(.6,.01,1,1.03);
+	/* animation-delay: 2s; */
+	animation-duration: reverse;
+	animation-iteration-count: 2;
+	/* можно все записать в 1 строку */
+	/* animation: 1s linear reverse inherit; */
+}
+
+@keyframes bg-color {
+	/* 1 кадр анимации */
+	from {
+		margin-left: 0;
+	}
+	/* Промежуточные кадры анимации */
+	10% {
+		margin-left: 20px;
+	}
+	/* Конечный кадр анимации  */
+	to {
+		background-color: red;
+	}
+}
+
+.box_28 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	animation: 3s linear forwards, bg-color 1s linear forwards;
+}
+
+
+
+/* Урок 30 */
+/* Урок 30 */
+/* Урок 30 */
+
+.section {
+	min-height: 100vh;
+	text-align: center;
+	width: 100%;
+	display: table;
+	/* background:  url(../video/ocean.jpg) no-repeat center;
+	background-size: cover; */
+}
+.wrap-block {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+}
